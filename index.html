@@ -1,6 +1,11 @@
 <html>
     <head>
-        <link rel="stylesheet" href="javascript.js">
+        <script src="javascript.js"></script>
+        <style>
+            span {
+                color: red;
+            }
+        </style>
     </head>
     <body>
         <h1>Bestilling av kinobiletter</h1>
@@ -12,25 +17,31 @@
             <option value="barbie">Barbie</option>
             <option value="simpsons">Simpsons</option>
         </select>
+        <span id="filmFeil"></span>
         <br><br>
 
-        <label for="antall">Antall</label>
+        <label for="antall">Antall </label>
         <input type="number" id="antall" name="antall">
+        <span id="antallFeil"></span>
         <br><br>
 
 
         <label for="fornavn">Fornavn </label>
-        <input type="text" id="fornavn" name="fornavn"><br>
+        <input type="text" id="fornavn" name="fornavn">
+        <span id="fornavnFeil"></span><br>
 
         <label for="etternavn">Etternavn </label>
-        <input type="text" id="etternavn" name="etternavn"><br>
+        <input type="text" id="etternavn" name="etternavn">
+        <span id="etternavnFeil"></span><br>
 
         <label for="telefonnr">Telefonnr </label>
-        <input type="text" id="relefonnr" name="telefonnr"><br>
+        <input type="text" id="telefonnr" name="telefonnr">
+        <span id="telefonnrFeil"></span><br>
 
         <label for="epost">Epost </label>
-        <input type="text" id="epost" name="epost"><br><br>
+        <input type="text" id="epost" name="epost">
+        <span id="epostFeil"></span><br><br>
 
-        <button type="submit" value="submit" id="kjop">Kjop bilett</button>
+        <button type="button" value="submit" onclick="validerData()">Kjop bilett</button>
     </body>
 </html>
